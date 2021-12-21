@@ -58,7 +58,7 @@ const options ={
 };
 
 const series = [
-  { name: 'New Subscribes', data: [30, 200, 45, 50, 212, 123, 70, 54] },
+  { name: 'New Users', data: [30, 200, 45, 50, 212, 123, 70, 54] },
 ]
 
 export default function Dashboard() {
@@ -75,7 +75,7 @@ export default function Dashboard() {
           borderRadius={8}
           pb="4"
           >
-            <Text fontSize="lg" mb="4">Weekly new subscribes</Text>
+            <Text fontSize="lg" mb="4">New users, weekly report</Text>
             <Chart options={options} series={series} type="area" height={160} />
 
           </Box>
@@ -85,7 +85,7 @@ export default function Dashboard() {
           borderRadius={8}
           pb="4"
           >
-            <Text fontSize="lg" mb="4">Opening Info</Text>
+            <Text fontSize="lg" mb="4">Attendency info</Text>
             <Chart options={options} series={series} type="area" height={160} />
 
           </Box>
