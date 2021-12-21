@@ -42,10 +42,18 @@ const options ={
       "2021-03-23T00:00:00.000Z",
       "2021-03-24T00:00:00.000Z",
       "2021-03-25T00:00:00.000Z",
-    ]
+    ], 
+  },
+  fill: {
+    opacity: 0.3,
+    type: 'gradient',
+    gradient: {
+      shade: 'dark',
+      opacityFrom: 0.7,
+      opacityTo: 0.3,
 
-    
-  }
+    }
+  },
 
 };
 
