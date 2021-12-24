@@ -25,7 +25,7 @@ export function Header() {
 
         {!isWideVersion && (
           <IconButton
-          aria-label="open navigation"
+          aria-label="open toggle menu"
           icon={<Icon as={RiMenuLine} />}
           fontSize="24"
           variant="unstyled"
