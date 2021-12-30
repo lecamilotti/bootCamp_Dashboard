@@ -76,7 +76,7 @@ export default function Dashboard() {
           borderRadius={8}
           pb="4"
           >
-            <Text fontSize="lg" mb="4">New users, weekly report</Text>
+            <Text fontSize="lg" mb="4">weekly report</Text>
             <Chart options={options} series={series} type="area" height={160} />
 
           </Box>
@@ -86,7 +86,7 @@ export default function Dashboard() {
           borderRadius={8}
           pb="4"
           >
-            <Text fontSize="lg" mb="4">Attendency info</Text>
+            <Text fontSize="lg" mb="4">Attendency report</Text>
             <Chart options={options} series={series} type="area" height={160} />
 
           </Box>
