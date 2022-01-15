@@ -16,7 +16,6 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { useEffect } from "react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { useQuery } from "react-query";
 
@@ -84,19 +83,19 @@ export default function UserList() {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  <Tr>
+                  {data.users.map(user => {
+                    return (
+                      <Tr key={user.id}>
                     <Td px={["4", "4", "6"]}>
                       <Checkbox colorScheme="pink" />
                     </Td>
                     <Td>
                       <Box>
-                        <Text fontWeight="bold">Leandro Camilotti</Text>
-                        <Text fontSize="sm" color="gray.300">
-                          lecamilotti@gmail.com
-                        </Text>
+                        <Text fontWeight="bold">{user.name}</Text>
+                        <Text fontSize="sm" color="gray.300">{user.email}</Text>
                       </Box>
                     </Td>
-                    {isWideVersion && <Td>21 December, 2021</Td>}
+                    {isWideVersion && <Td>{user.created_at}</Td>}
                     <Td>
                       <Button
                         as="a"
@@ -109,6 +108,8 @@ export default function UserList() {
                       </Button>
                     </Td>
                   </Tr>
+                    )
+                  })}
                 </Tbody>
               </Table>
               <Pagination />
