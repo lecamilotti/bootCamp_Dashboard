@@ -12,6 +12,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const queryClient = new QueryClient();
+console.log('queryClient', queryClient);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
