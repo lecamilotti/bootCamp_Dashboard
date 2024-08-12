@@ -35,12 +35,17 @@ export function makeServer() {
       // Create a known user
       server.create('user', {
         name: 'John Doe',
-        email: 'lecamilotti@gmail.com',
-        password: '123',
+        email: 'test@test.com',
+        password: '123456',
         created_at: new Date().toISOString(),
       });
+    
       // Create other random users
       server.createList('user', 199);
+    
+      // Log all users to the console
+      const allUsers = server.db.users;
+      console.log('allUsers', allUsers);
     },
 
     routes() {
@@ -48,9 +53,11 @@ export function makeServer() {
       this.timing = 750;
 
       this.get('/users', function (schema, request) {
+
         const { page = 1, per_page = 10 } = request.queryParams;
 
         const total = schema.all('user').length;
+        console.log('TOTAL',total);
 
         const pageStart = (Number(page) - 1) * Number(per_page);
         const pageEnd = pageStart + Number(per_page);

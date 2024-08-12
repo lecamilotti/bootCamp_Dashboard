@@ -10,9 +10,9 @@ export function SidebarNav() {
       <NavLink icon={RiDashboardLine} href="/dashboard">Dashbord</NavLink>
       <NavLink icon={RiContactsLine} href="/users">Users</NavLink>
     </NavSection>
-    <NavSection title="AUTOMATION">
-      <NavLink icon={RiInputMethodLine} href="/forms">Forms</NavLink>
-      <NavLink icon={RiGitMergeLine} href="/automation">Automation</NavLink>
+    <NavSection title="ADMIN">
+      <NavLink icon={RiInputMethodLine} href="/team">Working team</NavLink>
+      <NavLink icon={RiGitMergeLine} href="/schedule">Schedule</NavLink>
     </NavSection>
   </Stack>
   );

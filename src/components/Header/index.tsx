@@ -33,7 +33,7 @@ export function Header() {
           mr="2"
           ></IconButton>
         )}
-      <Logo/>
+      <Logo isLogin={false}/>
 
       <Flex align="center" ml="auto">
        {isWideVersion && <SearchBar />}
